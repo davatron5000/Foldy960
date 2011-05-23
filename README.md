@@ -5,7 +5,7 @@ Truth be told, this isn't even an official [Paravel](http://paravelinc.com) proj
 
 ## Features
 * Simplified 3 Column Responding Grid
-  * `< 400px`: One column fixed
+ * `< 400px`: One column fixed
   * `401px-640px`: One column fluid.
   * `641px-960px`: Fluid grid
   * `> 960px`: Fixed width 960 grid
