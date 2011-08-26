@@ -19,45 +19,44 @@ blockquote:before,blockquote:after,q:before,q:after{content:"";}
 blockquote,q{quotes:;}
 a img{border:none;}
 
-/* Grid
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
+
+/* Grid - Fluid 960 grid
 -------------------------------------------------------------- */
 .container{
-	width:960px;
-	margin:0 auto;
-	position:relative
+	width:92%;
+	max-width:960px; /* <-- width-governor */
+	margin: 0 auto;
+	position: relative;
 }
 
 .grid_1,.grid_2,.grid_3,.grid_full{
 	float:left;
-	margin:0px 10px
+	position:relative;
+	margin-left:1%;
+	margin-right:1%
 }
-.grid_1{
-	width:300px
-}
-.grid_2{
-	width:620px
-}
-.grid_3,.grid_full{
-	width:940px
-}
-.grid_right{
-	float:right
-}
-.grid_1	img {
+
+.grid_1		{ width:31.333% }
+.grid_2		{ width:64.667% }
+.grid_3,
+.grid_full	{ width:98.0% }
+.grid_right	{ float:right }
+
+/* Use as necessary for nested content. Also use percents here for fluidity. */
+.content-pad-right { margin-right: 4%; }
+.content-pad-left: { margin-left: 4%; }
+
+audio,
+img,
+video {
 	max-width: 100%;
-	height: auto;
 }
 
-
-.content-pad-right {
-	padding-right: 4%; /* Use as necessary. Also use percents here for fluidity. */
-}
-
-.content-pad-left: {
-	padding-left: 4%;
-}
-
-/* Page
+/* Layout
 -------------------------------------------------------------- */
 html { overflow-y: auto; }
 
@@ -72,8 +71,6 @@ html { overflow-y: auto; }
 /* Typography
 -------------------------------------------------------------- */
 
-/* Default font settings
-   The font-size percentage is of 16px (0.75 * 16px = 12px) */
 body { 
 	font-size: 100%;
  	line-height: 2;
@@ -147,137 +144,45 @@ pre,code    { margin: 1.5em 0; white-space: pre; }
 tt          { display: block; margin: 1.5em 0; line-height: 1.5; }
 pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
 
-/* Layout
--------------------------------------------------------------- */
-
 /* Page-Specific - based on the <body> class
 -------------------------------------------------------------- */
 
 
-/* @media Queries
+/* @media Queries -------------------------------------------- */
 
-We re-implement the grid over a few widths:
-
-* < 400px				- One column fixed
-* 401px-640px - One column fluid.
-* 641px-960px - Fluid grid
-
-All these are just sample widths that really depend on your design.
-Feel free to change/experiment/strip as necessary.
-
+/* @iPhone < 480px - One column fluid.
 -------------------------------------------------------------- */
-
-
-/* @iPhone: really small
--------------------------------------------------------------- */
-@media screen and (max-width: 400px){
-/*
-	Change to min-device-width just for phones.
-	You could also lower this for a smoother experience. This is set to 400px to test in-browser.
-*/
-	html{
-		-webkit-text-size-adjust:none;
-		-ms-text-size-adjust:none
-	}
-	body{
-		min-width:320px;
-		overflow:auto;
-		font-size: 75%;
-	}
-	.container{
-		width:300px;
-		margin:0px auto;
-		clear:both;
-		overflow:hidden;
-		position:relative
-	}
-	.grid_1,.grid_2,.grid_3,.grid_full{
-		width:300px;
-		margin:0 0 2.5%
-	}
+@media screen and (max-width:480px) {
 	
-	.grid_1 img{
-		max-width:100%
-	}
-
-	.content-pad-left,
-	.content-pad-right {
-		padding-left:0;
-		padding-right:0;
-	}
-
 }
 
-/* @1-Col
+/* @1-Col < 640px - One column fluid.
 -------------------------------------------------------------- */
-@media screen and (min-width: 401px) and (max-width: 640px){
-/*
-	Set min-width to your previous query's max-width +1
-*/
+@media screen and (max-width: 640px) {
 	html{
 		-webkit-text-size-adjust:none;
 		-ms-text-size-adjust:none
 	}
+	
 	body{
 		font-size: 82.5%;
 	}
+	
 	.container{
 		width:92%;
 		margin:0 auto
 	}
+	
 	.grid_1,.grid_2,.grid_3,.grid_full{
 		float: none;
 		width:100%;
-		margin:0 0 2.5%
-	}
-	.grid_1	img {
-		max-width: 100%;
+		margin:0 0 2.5em;
 	}
 
 	.content-pad-left,
 	.content-pad-right {
-		padding-left:0;
-		padding-right:0;
+		margin-left:0;
+		margin-right:0;
 	}
 
-
-}
-
-/* @iPad: Fluid Grid for screens less than 960px
--------------------------------------------------------------- */
-@media screen and (min-width: 641px) and (max-width: 960px){
-/*
-	Set min-width to your previous query's max-width +1
-*/
-	body{
-		font-size: 90%;
-	}
-	.container{
-		width:98%;
-		padding-left:1%;
-		padding-right:1%
-	}
-	.grid_1,.grid_2,.grid_3,.grid_full{
-		display:inline;
-		float:left;
-		position:relative;
-		margin-left:1%;
-		margin-right:1%
-	}
-	.grid_1{
-		width:31.333%
-	}
-	.grid_2{
-		width:64.667%
-	}
-	.grid_3,.grid_full{
-		width:98.0%
-	}
-	.grid_1 img{
-		max-width:100%;
-		height:auto
-	}
-	.grid_right{
-		float:right
-	}
 }
