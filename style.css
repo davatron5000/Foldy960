@@ -48,7 +48,7 @@ a img{border:none;}
 
 /* Use as necessary for nested content. Also use percents here for fluidity. */
 .content-pad-right { margin-right: 4%; }
-.content-pad-left: { margin-left: 4%; }
+.content-pad-left { margin-left: 4%; }
 
 audio,
 img,
