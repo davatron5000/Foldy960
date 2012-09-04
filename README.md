@@ -9,16 +9,20 @@ Foldy960 isn't aiming to be Yet-Another-CSS-Framework and we hesitate to use the
 * 990px total width.
 
 ## Features
-* Simplified 6 Column Responding Grid
-  * `< 480px`: One column fluid.
-  * `< 640px`: One column fluid.
-  * `> 640px`: Fluid 3 column 960 grid. (default)
-* `.grid_right` for proper content collapsing
+* Simplified Mobile First 6 Column Responding Grid
+  * `0 - 480px`: One column fluid.
+  * `480 - 640px`: One column fluid with a little subgridding.
+  * `640px+`: Fluid 6 column "960" grid.
+* `.grid-right` for proper content collapsing
 * `.content-pad-right` & `.content-pad-left` for extra padding if you needed. Obviously, not the most desired semantics, but absolutely bulletproof when you're padding content.
-* `.foldy-gallery` - a class for handling image galleries. Goes from tri-grid to bi-grid.
-* Foldy defaults to `max-width: 990px;` but change that to whatever you friggin' want.
+* `.gallery` - a class for handling image galleries. Goes from bi-grid to tri-grid.
+* Foldy defaults to `max-width: 1280px;` but change that to whatever you friggin' want.
 
 ## Changelog
+* 09/04/2011
+  * Mobile First
+  * Changed to hyphenation instead of underline.
+  * Changed `.foldy-gallery` to just `.gallery` with subclass `.grid-unit`
 * 09/07/2011
   * Switched to 6 column grid.
   * Added `.foldy-gallery` class.
