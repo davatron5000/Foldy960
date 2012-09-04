@@ -19,7 +19,7 @@ Foldy960 isn't aiming to be Yet-Another-CSS-Framework and we hesitate to use the
 * Foldy defaults to `max-width: 1280px;` but change that to whatever you friggin' want.
 
 ## Changelog
-* 09/04/2011
+* 09/04/2012
   * Mobile First
   * Changed to hyphenation instead of underline.
   * Changed `.foldy-gallery` to just `.gallery` with subclass `.grid-unit`
