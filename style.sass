@@ -52,11 +52,13 @@ canvas
   margin: 0 auto
   position: relative
 
-
   .row
     clear: both
 
+
+// SIX COLUMN
 @media screen and (min-width: 480px)
+    
   .container
     width: 98%
 
@@ -66,6 +68,12 @@ canvas
   .grid-4,
   .grid-5,
   .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12,
   .grid-half,
   .grid-full,
   .grid-unit
@@ -82,30 +90,82 @@ canvas
     float: right
 
 
-@media screen and (min-width: 640px)
-  
-  .grid-1   
-    width: 13.636363636364%
-  
-  .grid-2   
-    width: 30.30303030303%
-  
-  .grid-3,
-  .grid-half
-    width: 46.969696969697%
-  
-  .grid-4   
-    width: 63.636363636364%
-  
-  .grid-5   
-    width: 80.30303030303%
-  
-  .grid-6,
-  .grid-full
-    width: 96.969696969697%
 
-  .gallery .grid-unit
-    width: 30.30303030303%
+
+// ABOVE 640px 
+@media screen and (min-width: 640px)
+
+  // SIX COLUMN GRID
+  .cols-6
+  
+    .grid-1   
+      width: 13.636363636364%
+    
+    .grid-2   
+      width: 30.30303030303%
+    
+    .grid-3,
+    .grid-half
+      width: 46.969696969697%
+    
+    .grid-4   
+      width: 63.636363636364%
+    
+    .grid-5   
+      width: 80.30303030303%
+    
+    .grid-6,
+    .grid-full
+      width: 96.969696969697%
+
+    .gallery .grid-unit
+      width: 30.30303030303%
+
+
+  // TWELVE COLUMN
+  .cols-12
+  
+    .grid-1   
+      width: 5.30303030303%
+      font-size: .8em // to keep it on one col for visibility :)
+    
+    .grid-2   
+      width: 13.636363636364%
+    
+    .grid-3
+      width: 21.969696969697%
+        
+    .grid-4   
+      width: 30.30303030303%
+    
+    .grid-5  
+      width: 38.636363636364%
+    
+    .grid-6,
+    .grid-half
+      width: 46.969696969697%
+    
+    .grid-7
+      width: 55.30303030303%
+
+    .grid-8
+      width: 63.636363636364%
+    
+    .grid-9
+      width: 71.969696969697% 
+
+    .grid-10
+      width: 80.30303030303%
+
+    .grid-11
+      width: 88.636363636364%
+
+    .grid-12,
+    .grid-full
+      width: 96.969696969697%
+
+    .gallery .grid-unit
+      width: 30.30303030303%
 
 // Use (or don't) as necessary.
 .content-pad-right
