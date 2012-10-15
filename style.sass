@@ -1,0 +1,201 @@
+// ------------------------------------------------------------ //
+//
+//	Style.sass
+//
+//  Created by:	Dave Rupert
+//  Contact:    http://github.com/davatron5000/foldy960
+//  SASS version by: Elyse Holladay
+//  Contact:		http://github.com/elyseholladay/foldy960
+//
+//  Copyright 2012
+//  License:	  WTFPL + "Not going to maintain this because
+//              the rent is too damn high licence."
+
+// -------------------------------------------------------------- //
+
+
+
+// -------------------------------------------------------------- //
+// Responsive Resets -------------------------------------------- //
+// -------------------------------------------------------------- //
+
+@-o-viewport
+  width: device-width
+
+@-ms-viewport
+  width: device-width
+
+@viewport
+  width: device-width
+
+
+html
+  overflow-y: auto
+
+
+img,
+audio,
+video,
+canvas
+  max-width: 100%
+
+
+
+// -------------------------------------------------------------- //
+// Grid > 6 Column Mobile First
+// -------------------------------------------------------------- //
+.container
+  //  The `max-width` property is the width governer. I dare you to experiment
+  //  with setting this larger, something like 1280px.
+  max-width: 1280px
+  width: 92%
+  margin: 0 auto
+  position: relative
+
+
+  .row
+    clear: both
+
+@media screen and (min-width: 480px)
+  .container
+    width: 98%
+
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-half,
+  .grid-full,
+  .grid-unit
+    float: left
+    width: 96.969696969697%
+    margin: 0 1.515151515152% 1em
+
+  .gallery .grid-unit,
+  .grid-half
+    width: 46.969696969697%
+    margin: 0 1.515151515152% 1em
+
+  .grid-flow-opposite
+    float: right
+
+
+@media screen and (min-width: 640px)
+  
+  .grid-1   
+    width: 13.636363636364%
+  
+  .grid-2   
+    width: 30.30303030303%
+  
+  .grid-3,
+  .grid-half
+    width: 46.969696969697%
+  
+  .grid-4   
+    width: 63.636363636364%
+  
+  .grid-5   
+    width: 80.30303030303%
+  
+  .grid-6,
+  .grid-full
+    width: 96.969696969697%
+
+  .gallery .grid-unit
+    width: 30.30303030303%
+
+// Use (or don't) as necessary.
+.content-pad-right
+  padding-right: 4%
+
+.content-pad-left
+  padding-left: 4%
+
+
+// -------------------------------------------------------------- //
+// Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+// For best results, use your favorite clearfix here.
+// -------------------------------------------------------------- //
+
+.cf:before,
+.cf:after
+  content: ""
+  display: table
+
+.cf:after
+  clear: both
+
+.cf
+  zoom: 1
+  // For IE 6/7 (trigger hasLayout)
+
+
+// -------------------------------------------------------------- //
+// Layout  ------------------------------------------------------ //
+// -------------------------------------------------------------- //
+
+body 
+  font: 100%/1.5 sans-serif
+
+section
+  margin-bottom: 2em
+
+footer
+  font-size: 0.9em
+  border-top: 1px solid #ccc
+  padding: 0.5em 0 2.5em
+
+
+// -------------------------------------------------------------- //
+/* Typography --------------------------------------------------- //
+// -------------------------------------------------------------- //
+
+.heading
+  font-size: 3em
+  margin: 0
+
+.sub-heading
+  font-size: 2em
+  margin-bottom: 0.5em
+
+a
+  color: #0066cc
+
+a:focus,
+a:hover
+  color: #003399
+
+
+// -------------------------------------------------------------- //
+// Elements ----------------------------------------------------- //
+// -------------------------------------------------------------- //
+
+figure
+  margin: 0
+  background: #f8f8f8
+
+figcaption
+  padding: 0.5em 1em 1em
+  font-size: 0.875em
+
+code
+  padding: 0.5em
+  background: #efefef
+
+
+// -------------------------------------------------------------- //
+// Helpers ------------------------------------------------------ //
+// -------------------------------------------------------------- //
+
+.show-grid div[class*='grid-']
+  background-color: #eee
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  display: block
+  padding: 0.5em 1em
+  margin-bottom: 1em
+  text-align: center
