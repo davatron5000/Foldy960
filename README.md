@@ -8,6 +8,11 @@ Foldy960 isn't aiming to be Yet-Another-CSS-Framework and we hesitate to use the
 * 30px wide gutter
 * 990px total width.
 
+## FAQ
+
+* Do you have a Sass version? Nope, but @elyseholladay does: https://github.com/elyseholladay/Foldy960/tree/sassafras
+* Do you have a 12 column Sass version? Nope, but  @elyseholladay does: https://github.com/elyseholladay/Foldy960/tree/twelvecol
+
 ## Features
 * Simplified Mobile First 6 Column Responding Grid
   * `0 - 480px`: One column fluid.
